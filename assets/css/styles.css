@@ -147,6 +147,10 @@ nav > ul {
   }
 }
 
+.nav-scrolled {
+  margin-inline-end: 5dvw;
+}
+
 .header {
   position: fixed;
   top: 0;
