@@ -4,85 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>MST</title>
+    <script defer src="./assets/scripts/main.js"></script>
+    <title>SWT Realty Group | Luxury Developments</title>
   </head>
   <body>
-    <header>
-      <img src="" alt="Logo" />
-      <nav>
+    <header class="header">
+      <a href=""><img src="./assets/icons/logo.svg" alt="Logo" /></a>
+      <nav class="nav-primary" aria-label="Primary navigation">
         <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li><a href="#form">Consultation</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <div>
-          <h1></h1>
-          <h2></h2>
+    <main class="content">
+      <section class="hero-section" id="home">
+        <div class="hero-info">
+          <h1>Crafting Tomorrow's Skyline Today</h1>
+          <h2>Premium Residential & Commercial Developments</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>25+ Years Industry Experience</li>
+            <li>Sustainable Building Practices</li>
+            <li>Prime Locations Worldwide</li>
           </ul>
-          <button type="button"></button>
+          <button type="button">Explore</button>
         </div>
-        <div><img src="" alt="" /></div>
-      </section>
-      <section>
-        <div><img src="" alt="" /></div>
         <div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <button type="button"></button>
+          <img src="./assets/images/a-photo-of-a-real-estate-developer-s-web_U0dSIi2oQRSMUKHwwHt77Q_iw4w23olS1CVPQS5qoY8Dg.jpeg" alt="" />
         </div>
-        <div><img src="" alt="" /></div>
       </section>
-      <section>
+      <section class="info-section">
         <div>
-          <h2></h2>
-          <form action="">
-            <label for=""></label>
-            <input type="text" name="" id="" />
-            <label for=""></label>
-            <input type="text" name="" id="" />
-            <input type="checkbox" name="" id="" />
-            <button type="submit"></button>
-          </form>
+          <div><img src="" alt="" /></div>
+          <div>
+            <p>
+              From vision to reality, our award-winning team handles every
+              detail of the development process with precision and care.
+            </p>
+            <p>
+              We specialize in creating sustainable communities that blend
+              modern design with functional living spaces.
+            </p>
+            <p>
+              Our portfolio includes over 150 completed projects across three
+              continents, each setting new standards in quality and innovation.
+            </p>
+            <p>
+              Partner with us to transform your real estate vision into a
+              valuable asset that stands the test of time.
+            </p>
+            <button type="button">Portfolio</button>
+          </div>
+          <div><img src="" alt="" /></div>
         </div>
-      </section>
-      <section>
-        <nav>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </nav>
+        <div class="content__bottom" id="form">
+          <div>
+            <h2>Schedule Your Private Consultation</h2>
+            <form action="#">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="John Smith"
+                required />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="john@example.com"
+
+              <label for="newsletter">
+                <input type="checkbox" name="newsletter" id="newsletter" />
+                Subscribe to our investment opportunities newsletter
+              </label>
+              <button type="submit">Get Free Consultation</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
-      <div>
-        <img src="" alt="" />
-        <p></p>
-      </div>
-      <div>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <p></p>
-      </div>
-      <div>
-        <button type="button"></button>
-        <p></p>
-      </div>
+      <section>
+        <nav class="nav-seconadry" aria-label="Secondary navigation">
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li><a href="#form">Consultation</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="footer" id="footer">
+        <div>
+          <a href=""><img src="" alt="Logo" /></a>
+          <p>Building Sustainable Futures Since 1998</p>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./assets/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/twitter.svg" alt="Twitter" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="#">
+            <img src="./assets/icons/pinterest.svg" alt="Pinterest" />
+          </a>
+          <p>
+            Connect with us for the latest project updates and investment opportunities
+          </p>
+        </div>
+        <div>
+          <button type="button">Explore</button>
+          <p>&copy; 2023 SWT Realty Group. All rights reserved.<br>Headquarters: 500 Park Avenue, New York, NY</p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
