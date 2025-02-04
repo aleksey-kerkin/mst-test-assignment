@@ -338,7 +338,6 @@ hr {
       background-position: right;
       background-size: fill;
       background-image: url(../images/a-photo-of-a-real-estate-agent-with-docu_I6TBGKbpTXSMDQXEq4wq-g_4ynoBDheR0-_C-bgJqRSYQ.jpeg);
-      /* object-fit: contain; */
       mask-image: linear-gradient(to right, transparent, #ffffff);
     }
 
@@ -390,9 +389,7 @@ input[type="checkbox"] {
   display: block;
   position: relative;
   padding-left: 2rem;
-  /* margin-bottom: 12px; */
   cursor: pointer;
-  /* font-size: 1.5rem; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -431,12 +428,10 @@ input[type="checkbox"] {
   display: none;
 }
 
-/* Show the checkmark when checked */
 .checkbox-container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
   left: 9px;
   top: 5px;
