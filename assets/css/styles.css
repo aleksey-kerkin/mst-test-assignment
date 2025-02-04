@@ -20,7 +20,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Prata, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -75,7 +75,7 @@ h6 {
 }
 
 main > section {
-  padding-block-start: 6.25rem;
+  padding-block-start: clamp(3rem, 10vh, 6.25rem);
 }
 
 a {
@@ -95,54 +95,68 @@ footer img {
 }
 
 h1 {
+  font-family: Prata;
   line-height: 1.4;
-  font-size: 2.15rem;
+  font-size: clamp(2rem, 8vw, 5rem);
   padding-block-end: 1rem;
-  @media (width > 992px) {
-    font-size: 4rem;
-  }
 }
 
 h2 {
   line-height: 1.4;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 3rem);
   padding-block-end: 0.75rem;
-  @media (width > 992px) {
-    font-size: 2rem;
-  }
 }
 
 button {
   background-color: var(--primary-clr);
   color: var(--secondary-clr);
-  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  padding: 1.5rem 3rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active,
+  &:focus-visible {
+    background-color: var(--accent-clr);
+  }
 }
 
 ul {
   list-style: none;
-  /* margin-inline-end: 2rem; */
+  list-style-position: inside;
+}
+
+hr {
+  border-color: var(--accent-clr);
+  block-size: 0.025rem;
+  opacity: 0.5;
 }
 
 nav > ul {
   display: flex;
   gap: 1rem;
+  font-style: italic;
+
+  @media (width < 480px) {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 
   & > li {
-    font-size: 0.625rem;
-    @media (width > 992px) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
 }
 
 .nav-primary {
   margin-inline-end: 5dvw;
 
-  @media (width > 992px) {
+  @media (width > 1200px) {
     margin-inline-end: 50dvw;
   }
 }
@@ -156,32 +170,36 @@ nav > ul {
   top: 0;
   display: flex;
   inline-size: 100%;
-  padding-block: 1rem;
+  padding-block: 1.25rem;
+
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   transition: 0.3s ease;
+}
 
-  & img {
-    margin-inline-start: 5dvw;
-  }
+.logo {
+  font-family: Prata;
+  font-size: 2.25rem;
+  margin-inline-start: 5dvw;
+  inline-size: 3rem;
 }
 
 .hero-section {
+  display: block;
   padding-block-start: 0;
-  display: grid;
-  gap: 4rem;
-  align-items: start;
+  gap: clamp(1rem, 3vw, 4rem);
 
-  @media (width > 992px) {
+  @media (width > 1200px) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
   }
+
   & img {
     justify-self: center;
     display: block;
-    max-inline-size: 100%;
-    @media (width > 992px) {
+    inline-size: 100%;
+    @media (width > 1200px) {
       justify-self: end;
     }
   }
@@ -190,20 +208,185 @@ nav > ul {
 .hero-info {
   padding-block-start: 6.25rem;
   padding-inline-start: 5dvw;
+  margin-block-end: 4rem;
 
-  @media (width > 992px) {
-    padding-block-start: 20rem;
+  @media (width > 1200px) {
+    padding-block-start: 12rem;
   }
 
-  & li::marker {
-    content: "✔ ";
+  & img {
+    inline-size: 100%;
+  }
+}
+
+.hero-list {
+  margin-block-end: 1rem;
+}
+
+.hero-item {
+  font-size: clamp(0.75rem, 3vw, 1.75rem);
+
+  line-height: 2;
+  & img {
+    margin-inline-end: 0.5rem;
+    display: inline;
+    vertical-align: baseline;
+    inline-size: clamp(0.9rem, 3vw, 1.75rem);
   }
 }
 
 .info-section {
   background-color: var(--hero-clr);
+  padding-block-end: 6.25rem;
+}
+
+.info-content {
+  display: block;
+  @media (width > 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & .info-image {
+      block-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      &.right-image {
+        background-image: url(../images/Ng4_USgrTeOqbQZAYaULwg_74420363.jpg);
+      }
+      &.left-image {
+        background-image: url(../images/a-photo-of-a-modern-spacious-real-estate_n8QTpug0QNir_TBATA5jig_fa3G6P8SRPaaD8nociGQoA_74420421.jpg);
+      }
+    }
+  }
+}
+
+.info-paragraphs {
+  justify-self: center;
+  display: grid;
+  inline-size: 90dvw;
+
+  @media (width > 1200px) {
+    inline-size: min(100%, 30rem);
+  }
+
+  & p {
+    font-size: clamp(1rem, 3vw, 1.75rem);
+  }
+
+  & > img {
+    justify-self: center;
+    display: block;
+    inline-size: 100%;
+  }
+
+  & button {
+    margin-inline: 3rem;
+    padding-block: 1rem;
+  }
+}
+
+.info-item,
+hr {
+  margin-inline: clamp(1rem, 5vw, 3rem);
+}
+
+.info-item {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+
+  transition: transform 0.3s ease;
+  margin-block: 1rem;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  & img {
+    position: relative;
+    top: 0.5rem;
+    margin-inline-end: 0.5rem;
+    display: inline;
+    inline-size: 4rem;
+  }
+}
+
+.contact-form {
+  display: grid;
+  max-inline-size: 75rem;
+  max-block-size: 45rem;
+  border-radius: 1.5rem;
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+  margin-block-start: 4rem;
+  margin-inline: 10dvw;
+  overflow: hidden;
+
+  @media (width > 1200px) {
+    display: flex;
+    margin-inline: auto;
+
+    & .image-column {
+      content: url(../images/a-photo-of-a-real-estate-agent-with-docu_I6TBGKbpTXSMDQXEq4wq-g_4ynoBDheR0-_C-bgJqRSYQ.jpeg);
+      object-fit: cover;
+      mask-image: linear-gradient(to right, transparent, #ffffff);
+    }
+  }
+  & h2 {
+    font-family: Prata;
+  }
+  & button {
+    color: var(--primary-clr);
+    background-color: var(--secondary-clr);
+    &:hover {
+      opacity: 0.5;
+    }
+    &:active,
+    &:focus-visible {
+      background-color: var(--accent-clr);
+    }
+  }
+}
+
+.form-column {
+  padding: 5%;
+  inline-size: 100%;
+  max-inline-size: 60rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  inline-size: unset;
+}
+
+.nav-secondary > ul {
+  border-top: 2px solid var(--accent-clr);
+  border-bottom: 2px solid var(--accent-clr);
+  padding-block: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
-  margin-inline: 5dvw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }

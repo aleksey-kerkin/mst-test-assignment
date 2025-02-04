@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <a href=""><img src="./assets/icons/logo.svg" alt="Logo" /></a>
+      <a class="logo" href="#home">SWT</a>
       <nav class="nav-primary" aria-label="Primary navigation">
         <ul>
           <li>
@@ -25,43 +25,70 @@
         <div class="hero-info">
           <h1>Crafting Tomorrow's Skyline Today</h1>
           <h2>Premium Residential & Commercial Developments</h2>
-          <ul>
-            <li>25+ Years Industry Experience</li>
-            <li>Sustainable Building Practices</li>
-            <li>Prime Locations Worldwide</li>
+          <ul class="hero-list">
+            <li class="hero-item">
+              <img src="./assets/icons/tick.svg" alt="" />
+              25+ Years Industry Experience
+            </li>
+            <li class="hero-item">
+              <img src="./assets/icons/tick.svg" alt="" />
+              Sustainable Building Practices
+            </li>
+            <li class="hero-item">
+              <img src="./assets/icons/tick.svg" alt="" />
+              Prime Locations Worldwide
+            </li>
           </ul>
           <button type="button">Explore</button>
         </div>
         <div>
-          <img src="./assets/images/a-photo-of-a-real-estate-developer-s-web_U0dSIi2oQRSMUKHwwHt77Q_iw4w23olS1CVPQS5qoY8Dg.jpeg" alt="" />
+          <img
+            src="./assets/images/a-photo-of-a-real-estate-developer-s-web_U0dSIi2oQRSMUKHwwHt77Q_iw4w23olS1CVPQS5qoY8Dg.jpeg"
+            alt="" />
         </div>
       </section>
       <section class="info-section">
-        <div>
-          <div><img src="" alt="" /></div>
-          <div>
-            <p>
-              From vision to reality, our award-winning team handles every
-              detail of the development process with precision and care.
-            </p>
-            <p>
-              We specialize in creating sustainable communities that blend
-              modern design with functional living spaces.
-            </p>
-            <p>
-              Our portfolio includes over 150 completed projects across three
-              continents, each setting new standards in quality and innovation.
-            </p>
-            <p>
-              Partner with us to transform your real estate vision into a
-              valuable asset that stands the test of time.
-            </p>
+        <div class="info-content">
+          <div class="info-image left-image"></div>
+          <div class="info-paragraphs">
+            <div class="info-item">
+              <img src="./assets/icons/exclude.svg" alt="" />
+              <p>
+                From vision to reality, our award-winning team handles every
+                detail of the development process with precision and care.
+              </p>
+            </div>
+            <hr />
+            <div class="info-item">
+              <img src="./assets/icons/exclude.svg" alt="" />
+              <p>
+                We specialize in creating sustainable communities that blend
+                modern design with functional living spaces.
+              </p>
+            </div>
+            <hr />
+            <div class="info-item">
+              <img src="./assets/icons/exclude.svg" alt="" />
+              <p>
+                Our portfolio includes over 150 completed projects across three
+                continents, each setting new standards in quality and
+                innovation.
+              </p>
+            </div>
+            <hr />
+            <div class="info-item">
+              <img src="./assets/icons/exclude.svg" alt="" />
+              <p>
+                Partner with us to transform your real estate vision into a
+                valuable asset that stands the test of time.
+              </p>
+            </div>
             <button type="button">Portfolio</button>
           </div>
-          <div><img src="" alt="" /></div>
+          <div class="info-image right-image"></div>
         </div>
-        <div class="content__bottom" id="form">
-          <div>
+        <div class="contact-form" id="form">
+          <div class="form-column">
             <h2>Schedule Your Private Consultation</h2>
             <form action="#">
               <label for="name">Full Name</label>
@@ -71,27 +98,26 @@
                 id="name"
                 placeholder="John Smith"
                 required />
-
               <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="john@example.com"
-
-              <label for="newsletter">
+                placeholder="john@example.com" />
+              <div class="checkbox-container">
                 <input type="checkbox" name="newsletter" id="newsletter" />
-                Subscribe to our investment opportunities newsletter
-              </label>
+                <label for="newsletter">I accept Privacy Policy</label>
+              </div>
               <button type="submit">Get Free Consultation</button>
             </form>
           </div>
+          <div class="image-column"></div>
         </div>
       </section>
     </main>
     <footer>
       <section>
-        <nav class="nav-seconadry" aria-label="Secondary navigation">
+        <nav class="nav-secondary" aria-label="Secondary navigation">
           <ul>
             <li>
               <a href="#home">Home</a>
@@ -103,7 +129,7 @@
       </section>
       <section class="footer" id="footer">
         <div>
-          <a href=""><img src="" alt="Logo" /></a>
+          <a class="logo" href="#home">SWT</a>
           <p>Building Sustainable Futures Since 1998</p>
         </div>
         <div>
@@ -126,12 +152,17 @@
             <img src="./assets/icons/pinterest.svg" alt="Pinterest" />
           </a>
           <p>
-            Connect with us for the latest project updates and investment opportunities
+            Connect with us for the latest project updates and investment
+            opportunities
           </p>
         </div>
         <div>
           <button type="button">Explore</button>
-          <p>&copy; 2023 SWT Realty Group. All rights reserved.<br>Headquarters: 500 Park Avenue, New York, NY</p>
+          <p>
+            &copy; 2023 SWT Realty Group. All rights reserved.
+            <br />
+            Headquarters: 500 Park Avenue, New York, NY
+          </p>
         </div>
       </section>
     </footer>
